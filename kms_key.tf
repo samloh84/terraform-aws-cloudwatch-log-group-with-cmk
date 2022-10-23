@@ -1,4 +1,4 @@
-resource "aws_kms_key" "ssm_kms_key" {
+resource "aws_kms_key" "cloudwatch_log_group_kms_key" {
   description         = "KMS Key for encrypting ${var.name} Logs"
   policy              = data.aws_iam_policy_document.ssm_kms_key_iam_policy.json
   enable_key_rotation = true
